@@ -53,7 +53,7 @@ bool KERAPI_EXPORT isValidDbHandleEx(QWidget* ,DBHANDLE dbHandle)
 void KERAPI_EXPORT analogueManualSetEx(QWidget* pWidget,DBHANDLE dbHandle,float fValue)
 {
     if((!pWidget)||(!pWidget->isWindow()))
-        return kerEvent.hHandle;
+        return;
     KEREVENT kerEvent;
     memset( &kerEvent, 0, sizeof(KEREVENT) );
 
@@ -68,7 +68,7 @@ void KERAPI_EXPORT analogueManualSetEx(QWidget* pWidget,DBHANDLE dbHandle,float 
 void KERAPI_EXPORT digitalManualSetEx(QWidget* pWidget,DBHANDLE dbHandle,uchar btValue)
 {
     if((!pWidget)||(!pWidget->isWindow()))
-        return kerEvent.hHandle;
+        return;
     KEREVENT kerEvent;
     memset( &kerEvent, 0, sizeof(KEREVENT) );
 
@@ -84,7 +84,7 @@ void KERAPI_EXPORT digitalManualSetEx(QWidget* pWidget,DBHANDLE dbHandle,uchar b
 bool KERAPI_EXPORT getAttrEx(QWidget* pWidget,DBHANDLE dbHandle,ushort wAttrib,void* pValue,int length)
 {
     if((!pWidget)||(!pWidget->isWindow()))
-        return kerEvent.hHandle;
+        return false;
     KEREVENT kerEvent;
     memset( &kerEvent, 0, sizeof(KEREVENT) );
 
@@ -103,7 +103,7 @@ bool KERAPI_EXPORT getAttrEx(QWidget* pWidget,DBHANDLE dbHandle,ushort wAttrib,v
 bool KERAPI_EXPORT setAttrEx(QWidget* pWidget,DBHANDLE dbHandle,ushort wAttrib,void* pValue,int length)
 {
     if((!pWidget)||(!pWidget->isWindow()))
-        return kerEvent.hHandle;
+        return false;
     KEREVENT kerEvent;
     memset( &kerEvent, 0, sizeof(KEREVENT) );
 
